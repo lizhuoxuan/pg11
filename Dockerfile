@@ -10,8 +10,6 @@ RUN apt-get install libncurses5-dev libncursesw5-dev libreadline6-dev -y
 RUN apt-get install libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev -y
 RUN apt-get install libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev -y
 RUN apt-get install ca-certificates -y
-RUN ln /usr/lib/x86_64-linux-gnu/libssl.so.1.0.0 /usr/local/libssl.so
-RUN ln /usr/lib/x86_64-linux-gnu/libcrypto.so.1.0.0 /usr/local/libcrypto.so
 RUN wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tar.xz
 RUN tar -Jxvf Python-3.7.1.tar.xz
 RUN cd Python-3.7.1 && \
