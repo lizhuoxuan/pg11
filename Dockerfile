@@ -14,7 +14,7 @@ RUN wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tar.xz
 RUN tar -Jxvf Python-3.7.1.tar.xz
 RUN cd Python-3.7.1 && \
     ./configure && \
-     make & make install
+     make && make install
 RUN apt-get -y install postgresql-11-mysql-fdw postgresql-plpython3-11
 RUN wget https://github.com/postgrespro/pg_pathman/archive/1.5.2.tar.gz && \
   tar -xvzf 1.5.2.tar.gz && \
