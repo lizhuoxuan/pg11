@@ -17,7 +17,7 @@ RUN cd Python-3.7.1 && \
      make && make install
 RUN apt-get -y install postgresql-11-mysql-fdw postgresql-plpython3-11
 RUN wget https://codeload.github.com/postgrespro/pg_pathman/tar.gz/1.5.2-4 && \
-  tar -xvzf 1.5.2-4.tar.gz && \
+  tar -xvzf 1.5.2-4 && \
   cd pg_pathman-1.5.2-4 && make USE_PGXS=1 && make USE_PGXS=1 install && \
   cd .. && rm -R pg_pathman-1.5.2-4 && \
   rm -rf /var/lib/apt/lists/*
