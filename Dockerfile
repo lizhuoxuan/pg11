@@ -21,3 +21,5 @@ RUN wget https://codeload.github.com/postgrespro/pg_pathman/tar.gz/1.5.2-4 && \
   cd pg_pathman-1.5.2-4 && make USE_PGXS=1 && make USE_PGXS=1 install && \
   cd .. && rm -R pg_pathman-1.5.2-4 && \
   rm -rf /var/lib/apt/lists/*
+EXPOSE 5432
+CMD ["postgres"]
