@@ -3,7 +3,7 @@ FROM postgres:11
 MAINTAINER xzlzx (307871680@qq.com)
 
 RUN apt-get -y update 
-RUN apt-get -y install vim wget libkrb5-dev libssl-dev gcc make libxml2 libxml2-
+RUN apt-get -y install vim wget libkrb5-dev libssl-dev gcc make libxml2 libxml2-dev
 RUN apt-get -y install postgresql-server-dev-11 build-essential
 RUN apt-get install libncurses5-dev libncursesw5-dev libreadline6-dev -y
 RUN apt-get install libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev -y
