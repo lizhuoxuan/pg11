@@ -15,7 +15,7 @@ RUN cd Python-3.7.1 && \
     ./configure && \
      make && make install
 RUN apt-get -y install postgresql-11-mysql-fdw postgresql-plpython3-11
-RUN apt-get -y postgis postgresql-11-postgis-2.5
+RUN apt-get -y install postgis postgresql-11-postgis-2.5
 RUN wget https://codeload.github.com/postgrespro/pg_pathman/tar.gz/1.5.2-4 && \
   tar -xvzf 1.5.2-4 && \
   cd pg_pathman-1.5.2-4 && make USE_PGXS=1 && make USE_PGXS=1 install && \
