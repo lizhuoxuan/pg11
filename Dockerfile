@@ -3,7 +3,7 @@ FROM postgres:11
 MAINTAINER xzlzx (307871680@qq.com)
 
 RUN apt-get -y update 
-RUN apt-get -y install vim wget libkrb5-dev libssl-dev gcc make libxml2
+RUN apt-get -y install vim wget libkrb5-dev libssl-dev gcc make
 RUN apt-get -y install postgresql-server-dev-11 build-essential
 RUN apt-get install libncurses5-dev libncursesw5-dev libreadline6-dev -y
 RUN apt-get install libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev -y
@@ -18,7 +18,7 @@ RUN apt-get -y install postgresql-11-mysql-fdw postgresql-plpython3-11
 RUN wget http://postgis.net/stuff/postgis-2.5.2dev.tar.gz && \
     tar -xvzf postgis-2.5.2dev.tar.gz && \
     cd postgis-2.5.2dev && \
-    ./configure && \
+    ./configure --with-xml2config && \
      make && make install
 RUN wget https://codeload.github.com/postgrespro/pg_pathman/tar.gz/1.5.2-4 && \
   tar -xvzf 1.5.2-4 && \
