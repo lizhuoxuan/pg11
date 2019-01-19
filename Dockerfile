@@ -21,6 +21,8 @@ RUN wget http://www.xunsearch.com/scws/down/scws-1.2.3.tar.bz2 && \
    cd scws-1.2.3 && \
    ./configure && \
    make install
+RUN git clone https://github.com/amutu/zhparser.git && \
+   cd zhparser && make && make install
 RUN wget https://codeload.github.com/postgrespro/pg_pathman/tar.gz/1.5.2-4 && \
   tar -xvzf 1.5.2-4 && \
   cd pg_pathman-1.5.2-4 && make USE_PGXS=1 && make USE_PGXS=1 install && \
