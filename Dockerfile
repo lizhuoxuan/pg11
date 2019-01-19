@@ -16,6 +16,11 @@ RUN cd Python-3.7.1 && \
      make && make install
 RUN apt-get -y install postgresql-11-mysql-fdw postgresql-plpython3-11
 RUN apt-get -y install postgresql-11-postgis-2.5 postgresql-11-cron
+RUN wget http://www.xunsearch.com/scws/down/scws-1.2.3.tar.bz2 && \
+   tar xvf scws-1.2.3.tar.bz2 && \
+   cd scws-1.2.3 && \
+   ./configure && \
+   make install
 RUN wget https://codeload.github.com/postgrespro/pg_pathman/tar.gz/1.5.2-4 && \
   tar -xvzf 1.5.2-4 && \
   cd pg_pathman-1.5.2-4 && make USE_PGXS=1 && make USE_PGXS=1 install && \
