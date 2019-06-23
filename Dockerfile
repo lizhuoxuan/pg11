@@ -25,4 +25,3 @@ RUN apt-get -y update && \
    cd .. && rm -R pg_pathman-1.5.2-4 && \
    rm -rf /var/lib/apt/lists/* && \
    apt-get autoremove && apt-get clean
-  
