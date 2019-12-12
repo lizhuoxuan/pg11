@@ -12,7 +12,7 @@ RUN apt-get -y update && \
     apt-get -y install python3 python3-pip && \
     apt-get -y install postgresql-11-mysql-fdw postgresql-plpython3-11 && \
     apt-get -y install postgresql-11-postgis-2.5 postgresql-11-cron && \
-    apt-get -y install postgresql-11-python-multicorn && \
+    apt-get -y install postgresql-11-python3-multicorn && \
     pip3 install pg_es_fdw && \
     wget http://www.xunsearch.com/scws/down/scws-1.2.3.tar.bz2 && \
    tar xvf scws-1.2.3.tar.bz2 && \
